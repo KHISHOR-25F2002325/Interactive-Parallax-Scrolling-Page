@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE IRON CITADEL // MAN-MADE MEGASTRUCTURE</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #0c0d10;
+            color: #a1a8b5;
+            font-family: 'Share Tech Mono', monospace;
+            overflow-x: hidden;
+        }
+
+        .font-sync {
+            font-family: 'Syncopate', sans-serif;
+        }
+        /* Blueprint Blueprint Grid Patterns */
+        .blueprint-grid {
+            background-size: 50px 50px;
+            background-image: linear-gradient(to right, rgba(245, 158, 11, 0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(245, 158, 11, 0.04) 1px, transparent 1px);
+        }
+
+        .steel-mesh {
+            background-size: 20px 20px;
+            background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.01) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.01) 75%), linear-gradient(45deg, rgba(255, 255, 255, 0.01) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.01) 75%);
+            background-position: 0 0, 10px 10px;
+        }
+        /* Riveted Metal Plate Aesthetics */
+        .industrial-panel {
+            background: #13161c;
+            border: 2px solid #222631;
+            position: relative;
+        }
+
+            .industrial-panel::before {
+                content: '••••';
+                position: absolute;
+                top: 4px;
+                left: 6px;
+                color: #383f52;
+                letter-spacing: 4px;
+                font-size: 8px;
+            }
+
+        .hazard-stripes {
+            background: repeating-linear-gradient(45deg, #f59e0b, #f59e0b 12px, #1c1f26 12px, #1c1f26 24px);
+        }
+    </style>
+</head>
+<body class="selection:bg-[#f59e0b] selection:text-black">
+
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#0c0d10]/95 backdrop-blur-md border-b border-[#222631] px-6 py-4 flex justify-between items-center text-xs tracking-widest">
+        <div class="flex items-center space-x-3 text-white">
+            <div class="hazard-stripes w-8 h-3 inline-block"></div>
+            <span class="font-sync text-[12px] tracking-tight text-[#f59e0b]">IRON_CITADEL // ENG-LOG: 01-13</span>
+        </div>
+        <div class="text-[10px] text-gray-500 uppercase tracking-[0.2em] hidden md:flex space-x-8">
+            <div>ELEVATION: <span id="telemetry-scroll-val" class="text-white">0000</span> FT</div>
+            <div>CRANE BALANCER: <span class="text-amber-500 font-bold">STABLE</span></div>
+        </div>
+    </header>
+
+    <main class="relative w-full blueprint-grid">
+
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
+            <div id="layer-1-crane" class="absolute right-[5%] top-[10%] opacity-5 text-[35vw] font-bold font-sync text-white leading-none pointer-events-none select-none transition-transform duration-75 ease-out">
+                🏗️
+            </div>
+            <div class="text-center max-w-4xl relative z-10">
+                <div class="inline-block text-[11px] border border-amber-500/30 text-[#f59e0b] px-4 py-1 mb-6 bg-amber-500/5 uppercase tracking-[0.3em]">
+                    // ARCHITECTURAL BLUEPRINT INITIATED
+                </div>
+                <h1 class="font-sync text-[5vw] md:text-6xl lg:text-7xl text-white font-bold uppercase tracking-tighter leading-none mb-6">
+                    THE IRON<span class="text-[#f59e0b] select-all">-CITADEL</span>
+                </h1>
+                <p class="max-w-xl mx-auto text-gray-400 text-xs md:text-sm tracking-widest leading-relaxed uppercase mb-12">
+                    Heavy structural civil frameworks engineered by human hands. Riveted structural steel frames, deep dynamic counterweights, and cable-stayed trusses scaling heights step by step.
+                </p>
+                <div class="text-xs text-[#f59e0b] uppercase tracking-[0.3em] animate-pulse">
+                    ↓ SCROLL TO BEGIN SITE ASCENT
+                </div>
+            </div>
+        </section>
+
+        <section class="relative h-[80vh] flex items-center bg-[#111319] border-y border-[#222631] overflow-hidden steel-mesh">
+            <div id="layer-2-wire" class="absolute inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-amber-500/40 to-transparent transition-transform duration-75 ease-out" style="transform: rotate(5deg) translateY(0px);"></div>
+
+            <div class="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
+                <div class="industrial-panel p-8 shadow-2xl">
+                    <span class="text-xs text-[#f59e0b] font-bold tracking-widest block mb-2 mt-2">// SYSTEM_02 // LOAD STRUTS</span>
+                    <h2 class="font-sync text-lg text-white font-bold mb-4">CABLE-STAYED TENSION</h2>
+                    <p class="text-gray-400 text-xs uppercase leading-relaxed">High-tensile braided steel ropes distribute total dead load pressures directly back into the deep subterranean rock pillars.</p>
+                </div>
+                <div id="layer-2-weight-card" class="industrial-panel p-8 shadow-2xl transition-transform duration-75 ease-out">
+                    <span class="text-xs text-gray-400 font-bold tracking-widest block mb-2 mt-2">// TRACK_02B // LIVE OFFSET</span>
+                    <h2 class="font-sync text-lg text-white font-bold mb-4">DYNAMIC SUSPENSION DRIFT</h2>
+                    <p class="text-gray-400 text-xs uppercase leading-relaxed">As wind shear vectors punch into the high towers, this section undergoes deliberate physical play alignment to keep the scaffolding true.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative py-36 bg-[#0c0d10] overflow-hidden">
+            <div id="layer-3-piston" class="absolute left-[5%] w-[8px] h-[300%] bg-gradient-to-b from-[#f59e0b] to-transparent opacity-30 transition-transform duration-75 ease-out"></div>
+            <div class="max-w-4xl mx-auto px-6 relative z-10">
+                <span class="text-xs text-amber-500 tracking-widest block mb-2">// UNIT_03 // LIFT CORE</span>
+                <h2 class="font-sync text-2xl md:text-3xl text-white font-bold uppercase mb-4">HEAVY PISTON PRESSURE DISPLACEMENT</h2>
+                <p class="text-gray-400 text-xs md:text-sm uppercase leading-relaxed max-w-2xl">
+                    Pumping mechanical hydraulic fluid at massive pressures to lift heavy iron framing segments up to the upper deck installation joints.
+                </p>
+            </div>
+        </section>
+
+        <section class="relative min-h-[70vh] flex items-center bg-[#13161c] border-b border-[#222631] steel-mesh">
+            <div class="max-w-6xl mx-auto px-6 w-full grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="border border-[#222631] p-6 bg-black/40"><span class="block text-white font-bold text-2xl">14,200</span><span class="text-[10px] text-gray-500 uppercase">STEEL BEAMS</span></div>
+                <div class="border border-[#222631] p-6 bg-black/40"><span class="block text-[#f59e0b] font-bold text-2xl">850,000</span><span class="text-[10px] text-gray-500 uppercase">PNEUMATIC RIVETS</span></div>
+                <div id="layer-4-stat" class="border border-amber-500/30 p-6 bg-black/40 transition-transform duration-75 ease-out"><span class="block text-amber-500 font-bold text-2xl">420 FT</span><span class="text-[10px] text-gray-500 uppercase">CURRENT CRANE REACH</span></div>
+                <div class="border border-[#222631] p-6 bg-black/40"><span class="block text-red-500 text-2xl">0 SAFETY FAULTS</span><span class="text-[10px] text-gray-500 uppercase">HUMAN PROTOCOLS</span></div>
+            </div>
+        </section>
+
+        <section class="relative py-40 bg-[#0c0d10] overflow-hidden">
+            <div id="layer-5-counterweight" class="absolute right-[10%] top-[40%] w-32 h-64 bg-[#222631] border-4 border-amber-500 flex items-center justify-center transition-transform duration-75 ease-out">
+                <div class="hazard-stripes w-full h-4 absolute top-0"></div>
+                <span class="text-xs text-white font-bold text-center uppercase tracking-tighter p-2 font-sync">50 TON<br>BALANCER</span>
+            </div>
+            <div class="max-w-3xl mx-auto px-6 relative z-10 ml-6 md:ml-32">
+                <span class="text-xs text-amber-500 block mb-2">// ARCH_05 // BALANCE_BLOCKS</span>
+                <h2 class="font-sync text-2xl text-white font-bold uppercase mb-4">INVERSE CAST-IRON COUNTERWEIGHT</h2>
+                <p class="text-gray-400 text-xs uppercase leading-relaxed max-w-xl">
+                    As the heavy derrick cranes payload swings outward, massive solid cast-iron ballast blocks slide dynamically on guide tracks to neutralize tipping moments.
+                </p>
+            </div>
+        </section>
+
+        <section class="relative h-[60vh] flex items-center bg-[#111319] border-y border-[#222631]">
+            <div id="layer-6-truss-text" class="absolute inset-x-0 text-center opacity-5 font-sync text-[12vw] font-extrabold text-white tracking-widest pointer-events-none transition-transform duration-75 ease-out">
+                XXXXX TRUSS XXXXX
+            </div>
+            <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+                <span class="text-xs text-amber-500 block mb-2">// STRUCTURAL_GEOMETRY</span>
+                <h2 class="font-sync text-xl md:text-2xl text-white font-bold uppercase">WARREN TRUSS CROSS-BRACING FRAMEWORK</h2>
+                <p class="text-gray-400 text-xs uppercase mt-4 max-w-lg mx-auto">Interlocking triangulation arrays configured by structural engineers to eliminate raw bending stresses across the open spans.</p>
+            </div>
+        </section>
+
+        <section class="relative py-32 bg-[#0c0d10] blueprint-grid">
+            <div class="max-w-5xl mx-auto px-6 text-right">
+                <div id="layer-7-gearbox" class="industrial-panel p-10 inline-block text-left max-w-2xl shadow-xl transition-transform duration-75 ease-out">
+                    <span class="text-xs text-amber-500 block mb-2">[ UNIT_MECHANICAL_07 ]</span>
+                    <h3 class="font-sync text-lg text-white font-bold mb-4">REDUCTION COG TRANSMISSION</h3>
+                    <p class="text-gray-400 text-xs uppercase leading-relaxed">
+                        Converting high-speed human diesel turbine velocity into pure, unstoppable turning force torque to wrap massive steel hoisting cables around the primary winch drums.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative h-[70vh] bg-[#13161c] overflow-hidden flex items-center steel-mesh">
+            <div id="layer-8-pipe" class="absolute left-[20%] w-[200px] h-full bg-gradient-to-r from-white/5 to-transparent border-x border-[#222631] transition-transform duration-75 ease-out"></div>
+            <div class="max-w-7xl mx-auto px-6 w-full text-left relative z-10">
+                <div class="max-w-md bg-[#0c0d10]/90 border border-[#222631] p-6">
+                    <div class="text-xs text-gray-500 mb-2">// VENTILATION_PLENUM_08</div>
+                    <h3 class="font-sync text-md text-white font-bold uppercase mb-2">BOILER STEAM EXHAUST SHAFTS</h3>
+                    <p class="text-gray-400 text-xs uppercase">Releasing massive pneumatic backpressures directly outward into the open air currents as load limits cycle.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative py-32 bg-[#0c0d10] border-b border-[#222631]">
+            <div class="max-w-5xl mx-auto px-6 text-center">
+                <span class="text-xs text-amber-500 tracking-widest block mb-4">// MAN_MADE_DRAFTING</span>
+                <h2 class="font-sync text-xl md:text-3xl text-white font-bold mb-6">SITE COMPILATION SCHEMATICS</h2>
+                <div class="border border-[#222631] p-4 bg-black/40 max-w-2xl mx-auto">
+                    <div class="h-32 border border-dashed border-amber-500/20 flex items-center justify-center text-xs tracking-widest text-gray-500 uppercase">
+                        [ DRAFTED VIEWPORT SECTOR REF: GRID-994 ]
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative py-40 bg-[#111319] steel-mesh">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs text-amber-500 block mb-2">// SUB_BASE_FOUNDATION</span>
+                    <h2 class="font-sync text-xl text-white font-bold uppercase mb-4">BEDROCK COUPLING PILES</h2>
+                    <p class="text-gray-400 text-xs uppercase leading-relaxed">
+                        Drilling down 120 feet beneath the topsoil layer to anchor the structural base frames directly into solid prehistoric granite blocks.
+                    </p>
+                </div>
+                <div id="layer-10-caisson" class="industrial-panel p-8 text-center transition-transform duration-75 ease-out">
+                    <span class="text-xs text-gray-500 block mb-2">TOTAL ANCHOR WEIGHT LOAD</span>
+                    <span class="font-sync text-2xl text-amber-500 font-bold">14,800 METRIC TONS</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative h-[60vh] flex items-center justify-center overflow-hidden bg-black">
+            <div id="layer-11-ring" class="absolute w-[50vw] h-[50vw] border-4 border-dashed border-[#222631] rounded-full transition-transform duration-75 ease-out"></div>
+            <div class="text-center relative z-10 px-6">
+                <span class="text-amber-500 text-xs block mb-2">// PLATFORM_11 // ELEVATION EXTENSION</span>
+                <h2 class="font-sync text-xl md:text-2xl text-white font-bold uppercase">CENTRAL DERRICK TURNTABLE MOUNT</h2>
+            </div>
+        </section>
+
+        <section class="relative py-32 bg-[#0c0d10] border-t border-[#222631]">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="mb-6 border-b border-[#222631] pb-4">
+                    <span class="text-xs text-amber-500 block">// FIELD_JOURNAL</span>
+                    <h2 class="font-sync text-lg text-white font-bold uppercase">HUMAN_CONSTRUCTION_LOGS</h2>
+                </div>
+                <div class="bg-[#13161c] border-2 border-[#222631] p-6 h-60 overflow-hidden text-xs text-amber-400/90 font-mono space-y-2">
+                    <p class="text-gray-500">[SHIFT_LOG: 07:00 AM] All site engineers equipped with heavy toolkits. Commencing hoist line stress checks.</p>
+                    <p>[OK] Dynamic structural counterweights responsive to heavy wind movements perfectly.</p>
+                    <p class="text-[#f59e0b]">[ENGINEERING] Rivet alignment checks completed on sectors 1 through 13. Zero shear cracks reported.</p>
+                    <p class="text-gray-400">[SYSTEM STATUS] Structure compilation executed entirely using human physical drafting standards.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative min-h-screen flex flex-col justify-between items-center py-24 px-6 blueprint-grid">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#0c0d10] pointer-events-none"></div>
+            <div></div> <div class="text-center max-w-2xl relative z-10 my-auto">
+                <div class="w-16 h-[2px] bg-amber-500 mx-auto mb-6"></div>
+                <h3 class="font-sync text-xl md:text-2xl text-white font-bold uppercase tracking-wide mb-4">CROWN_SUMMIT_REACHED</h3>
+                <p class="text-gray-500 text-xs uppercase tracking-widest leading-relaxed">
+                    All 13 structural industrial platforms fully erected and checked. 
+                </p>
+            </div>
+
+            <footer class="w-full max-w-7xl mx-auto border-t border-[#222631] pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-600 tracking-widest relative z-10">
+                <div>// STATUS: ALL MECHANICAL CONNECTIONS ANCHORED</div>
+                <div>2026 // MAN-MADE INDUSTRIAL PARALLAX DEPLOYMENT</div>
+            </footer>
+        </section>
+
+    </main>
+
+    <script>
+        const scrollMetricVal = document.getElementById('telemetry-scroll-val');
+        const layer1Crane = document.getElementById('layer-1-crane');
+        const layer2Wire = document.getElementById('layer-2-wire');
+        const layer2WeightCard = document.getElementById('layer-2-weight-card');
+        const layer3Piston = document.getElementById('layer-3-piston');
+        const layer4Stat = document.getElementById('layer-4-stat');
+        const layer5Weight = document.getElementById('layer-5-counterweight');
+        const layer6TrussText = document.getElementById('layer-6-truss-text');
+        const layer7Gearbox = document.getElementById('layer-7-gearbox');
+        const layer8Pipe = document.getElementById('layer-8-pipe');
+        const layer10Caisson = document.getElementById('layer-10-caisson');
+        const layer11Ring = document.getElementById('layer-11-ring');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+
+            // Update Header Telemetry Elevation Monitor Counter
+            scrollMetricVal.innerText = String(Math.floor(scrollTop)).padStart(4, '0');
+
+            // Staggered Layer Computations (Human engineering elements drifting independently)
+            layer1Crane.style.transform = `translateY(${scrollTop * 0.45}px) rotate(${scrollTop * 0.02}deg)`;
+            layer2Wire.style.transform = `translateY(${(scrollTop - 200) * 0.15}px) rotate(4deg)`;
+            layer2WeightCard.style.transform = `translateY(${(scrollTop - 400) * -0.12}px)`;
+            layer3Piston.style.transform = `translateY(${scrollTop * 0.25}px)`;
+            layer4Stat.style.transform = `scale(${Math.max(0.9, 1 - (scrollTop - 1000) * 0.0003)})`;
+
+            // INVERSE PARALLAX MECHANIC: Moving the counterweight UPWARD dynamically as you scroll down
+            layer5Weight.style.transform = `translateY(${(scrollTop - 1600) * -0.3}px)`;
+
+            layer6TrussText.style.transform = `translateX(${(scrollTop - 2200) * 0.3}px)`;
+            layer7Gearbox.style.transform = `translateY(${(scrollTop - 2800) * -0.07}px) rotate(${(scrollTop - 2800) * 0.01}deg)`;
+            layer8Pipe.style.transform = `translateY(${(scrollTop - 3400) * 0.18}px)`;
+            layer10Caisson.style.transform = `scale(${1 + (scrollTop - 4400) * 0.0004})`;
+            layer11Ring.style.transform = `scale(${Math.max(0.5, 1.5 - (scrollTop - 5000) * 0.001)})`;
+        });
+    </script>
+</body>
+</html>
